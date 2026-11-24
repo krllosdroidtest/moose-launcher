@@ -1,0 +1,140 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      release_version_name:
+        description: 'Optional Release versionName (e.g. 1.0). Used only for Release artifacts.'
+        required: false
+        default: ''
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Compute version metadata
+        id: version
+        shell: bash
+        run: |
+          COMMITS=$(git rev-list --count HEAD)
+          BASE_COMMITS=0
+          MINOR=$((COMMITS - BASE_COMMITS))
+          if [ "$MINOR" -lt 1 ]; then
+            MINOR=1
+          fi
+          CODE=$((COMMITS + 1))
+          DEBUG_NAME="0.${MINOR}"
+          INPUT_RELEASE="${{ inputs.release_version_name }}"
+          if [ -n "$INPUT_RELEASE" ]; then
+            RELEASE_NAME="$INPUT_RELEASE"
+          else
+            RELEASE_NAME="$DEBUG_NAME"
+          fi
+          echo "code=${CODE}" >> "$GITHUB_OUTPUT"
+          echo "debug_name=${DEBUG_NAME}" >> "$GITHUB_OUTPUT"
+          echo "release_name=${RELEASE_NAME}" >> "$GITHUB_OUTPUT"
+          echo "Computed versionCode=${CODE}, debug_name=${DEBUG_NAME}, release_name=${RELEASE_NAME}"
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.3.1'
+
+      - name: Accept Android SDK licenses
+        shell: bash
+        run: |
+          yes | sdkmanager --licenses > /dev/null 2>&1 || true
+
+      - name: Ensure .env.example exists
+        shell: bash
+        run: touch -a .env.example
+
+      - name: Prepare debug keystore
+        shell: bash
+        run: |
+          if [ -f "debug.keystore.base64" ]; then
+            base64 -d debug.keystore.base64 > debug.keystore
+          elif [ ! -f "debug.keystore" ]; then
+            keytool -genkeypair -v \
+              -keystore debug.keystore \
+              -storepass android \
+              -alias androiddebugkey \
+              -keypass android \
+              -keyalg RSA \
+              -keysize 2048 \
+              -validity 10000 \
+              -dname "CN=Android Debug,O=Android,C=US"
+          fi
+
+      - name: Run unit and Robolectric tests
+        run: gradle :app:testDebugUnitTest
+
+      - name: Build Debug APK
+        env:
+          APP_VERSION_NAME: ${{ steps.version.outputs.debug_name }}
+          APP_VERSION_CODE: ${{ steps.version.outputs.code }}
+        run: |
+          gradle :app:assembleDebug
+          mkdir -p dist
+          cp app/build/outputs/apk/debug/app-debug.apk "dist/MooseLauncher-${APP_VERSION_NAME}.apk"
+
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MooseLauncher-debug-${{ steps.version.outputs.debug_name }}
+          path: dist/MooseLauncher-${{ steps.version.outputs.debug_name }}.apk
+
+      - name: Check release keystore secret
+        id: release_check
+        shell: bash
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "has_keystore=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_keystore=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build Release APK and AAB
+        if: steps.release_check.outputs.has_keystore == 'true'
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PATH: ${{ github.workspace }}/my-upload-key.jks
+          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          APP_VERSION_NAME: ${{ steps.version.outputs.release_name }}
+          APP_VERSION_CODE: ${{ steps.version.outputs.code }}
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 -d > "$KEYSTORE_PATH"
+          gradle :app:assembleRelease :app:bundleRelease
+          mkdir -p dist
+          cp app/build/outputs/apk/release/app-release.apk "dist/MooseLauncher-${APP_VERSION_NAME}-release.apk"
+          cp app/build/outputs/bundle/release/app-release.aab "dist/MooseLauncher-${APP_VERSION_NAME}.aab"
+          rm -f "$KEYSTORE_PATH"
+
+      - name: Upload Release artifacts
+        if: steps.release_check.outputs.has_keystore == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: MooseLauncher-release-${{ steps.version.outputs.release_name }}
+          path: |
+            dist/MooseLauncher-${{ steps.version.outputs.release_name }}-release.apk
+            dist/MooseLauncher-${{ steps.version.outputs.release_name }}.aab
