@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">Moose Launcher</string>
+    <string name="action_back">Volver al escritorio</string>
+
+    <!-- Secciones -->
+    <string name="tab_desktop">Escritorio</string>
+    <string name="tab_library">Biblioteca de Apps</string>
+    <string name="tab_settings">Configuración</string>
+
+    <!-- Barra de Menú y Spotlight -->
+    <string name="spotlight_hint">Búsqueda Spotlight de apps, carpetas…</string>
+    <string name="spotlight_placeholder">Buscar apps o carpetas…</string>
+    <string name="spotlight_folders_header">Carpetas</string>
+    <string name="spotlight_apps_header">Apps</string>
+    <string name="spotlight_quick_actions">Acciones Rápidas</string>
+    <string name="action_new_folder">Nueva Carpeta</string>
+    <string name="action_manage_widgets">Widgets</string>
+
+    <!-- Widgets -->
+    <string name="widgets_section_title">Widgets</string>
+    <string name="widget_clock_title">Reloj y Fecha</string>
+    <string name="widget_system_title">Estado del Dispositivo</string>
+    <string name="widget_notes_title">Notas Rápidas</string>
+    <string name="widget_battery_label">Batería</string>
+    <string name="widget_battery_charging">%1$d%% • Cargando</string>
+    <string name="widget_battery_discharging">%1$d%%</string>
+    <string name="widget_storage_label">Espacio Libre</string>
+    <string name="widget_storage_gb_format">%.1f GB libres</string>
+    <string name="widget_notes_placeholder">Escribe una nota rápida sin conexión…</string>
+    <string name="widget_notes_edit">Editar nota</string>
+    <string name="widget_notes_save">Guardar</string>
+    <string name="widget_settings_title">Widgets del Escritorio</string>
+    <string name="widget_settings_subtitle">Elige widgets locales o añade widgets de otras apps instaladas.</string>
+    <string name="widgets_add_external">Añadir Widget de App</string>
+    <string name="widgets_external_header">Widgets de Apps Instaladas</string>
+    <string name="widget_external_fallback">Widget de App</string>
+    <string name="widget_external_remove">Quitar widget</string>
+    <string name="widget_external_resize_taller">Más alto</string>
+    <string name="widget_external_resize_compact">Compacto</string>
+    <string name="widget_external_unavailable">Widget no disponible en este dispositivo.</string>
+
+    <!-- Escritorio y Menú de Pulsación Larga -->
+    <string name="desktop_customize_title">Escritorio</string>
+    <string name="desktop_customize_subtitle">Organiza carpetas, widgets, fondo y ajustes del launcher.</string>
+    <string name="desktop_hint_minimal">Mantén pulsado el fondo para personalizar • Desliza para Apps</string>
+    <string name="desktop_set_default_action">Establecer como Inicio Predeterminado</string>
+    <string name="desktop_menu_wallpaper">Elegir Foto de Fondo</string>
+    <string name="desktop_menu_notifications">Activar Puntos de Notificación</string>
+    <string name="desktop_appearance_settings">Ajustes y Copia de Seguridad</string>
+
+    <string name="folder_create_title">Crear Carpeta</string>
+    <string name="folder_rename_title">Renombrar Carpeta</string>
+    <string name="folder_name_hint">Nombre de la carpeta (ej. Trabajo, Multimedia)</string>
+    <string name="folder_create_confirm">Crear</string>
+    <string name="folder_save_confirm">Guardar</string>
+    <string name="folder_cancel">Cancelar</string>
+    <string name="folder_delete">Eliminar carpeta</string>
+    <string name="folder_add_apps">Añadir apps</string>
+    <string name="folder_empty_hint">Esta carpeta está vacía. Añade apps para agruparlas.</string>
+    <string name="folder_count_format">%1$d apps</string>
+
+    <!-- Dock Flotante Estilo macOS -->
+    <string name="dock_apps_button">Launchpad</string>
+
+    <!-- Biblioteca de Apps -->
+    <string name="library_search_placeholder">Buscar apps instaladas o paquetes…</string>
+    <string name="library_clear_search">Limpiar búsqueda</string>
+    <string name="library_count_format">%1$d apps</string>
+    <string name="library_empty_title">No se encontraron apps</string>
+    <string name="library_empty_subtitle">Prueba otro nombre o cambia de categoría.</string>
+    <string name="category_all">Todas</string>
+    <string name="category_productivity">Productividad</string>
+    <string name="category_media">Multimedia</string>
+    <string name="category_communication">Social</string>
+    <string name="category_utilities">Utilidades</string>
+    <string name="category_system">Sistema</string>
+
+    <!-- Acciones de la App -->
+    <string name="action_open_app">Abrir App</string>
+    <string name="action_pin_home">Fijar en Escritorio</string>
+    <string name="action_unpin_home">Quitar del Escritorio</string>
+    <string name="action_pin_dock">Fijar en el Dock</string>
+    <string name="action_unpin_dock">Quitar del Dock</string>
+    <string name="action_add_to_folder">Carpetas</string>
+    <string name="action_app_info">Información de la App</string>
+    <string name="action_close">Cerrar</string>
+    <string name="feedback_app_launch_error">No se pudo abrir %1$s en este dispositivo.</string>
+
+    <!-- Recorte de Fondo -->
+    <string name="wallpaper_crop_title">Ajustar Fondo</string>
+    <string name="wallpaper_crop_hint">Pellizca para hacer zoom y arrastra para encuadrar.</string>
+    <string name="wallpaper_apply_desktop_only">Solo Escritorio</string>
+    <string name="wallpaper_apply_both">Escritorio y Sistema</string>
+    <string name="feedback_wallpaper_updated">Fondo de pantalla actualizado.</string>
+    <string name="feedback_wallpaper_error">No se pudo procesar la foto seleccionada.</string>
+
+    <!-- Configuración y Copia de Seguridad -->
+    <string name="settings_appearance_title">Apariencia y Superficie</string>
+    <string name="settings_theme_label">Tema</string>
+    <string name="settings_theme_system">Sistema</string>
+    <string name="settings_theme_light">Claro</string>
+    <string name="settings_theme_dark">Oscuro</string>
+    <string name="settings_dynamic_color">Color Dinámico (Material You)</string>
+    <string name="settings_dynamic_color_desc">Adapta la paleta a los colores del fondo en Android 12+.</string>
+    <string name="settings_wallpaper_label">Fondo del Escritorio</string>
+    <string name="settings_wallpaper_tonal">Tonal Limpio</string>
+    <string name="settings_wallpaper_mist">Niebla Nórdica</string>
+    <string name="settings_wallpaper_midnight">Cordillera Nocturna</string>
+    <string name="settings_wallpaper_photo">Foto de Galería</string>
+    <string name="settings_pick_gallery_photo">Elegir y Recortar Foto de Galería</string>
+    <string name="settings_dock_labels">Mostrar nombres en el Dock Flotante</string>
+    <string name="settings_dock_labels_desc">Muestra etiquetas compactas bajo los íconos del dock.</string>
+
+    <string name="settings_notifications_title">Puntos de Notificación</string>
+    <string name="settings_notifications_active">Puntos de notificación activos para apps del escritorio y dock.</string>
+    <string name="settings_notifications_inactive">Concede acceso a notificaciones para mostrar puntos discretos en los íconos.</string>
+    <string name="settings_open_notifications_settings">Configurar Acceso a Notificaciones</string>
+
+    <string name="settings_launcher_title">Launcher del Sistema</string>
+    <string name="settings_default_home_status_active">Moose Launcher ya es tu app de Inicio predeterminada.</string>
+    <string name="settings_default_home_status_inactive">Establece Moose Launcher como inicio predeterminado para una integración completa.</string>
+    <string name="settings_open_home_settings">Elegir App de Inicio Predeterminada</string>
+
+    <string name="settings_backup_title">Copia de Seguridad Sin Conexión (.json)</string>
+    <string name="settings_backup_subtitle">Exporta o restaura carpetas, posiciones de cuadrícula, accesos, widgets, notas y preferencias localmente.</string>
+    <string name="settings_export_json">Exportar Copia JSON</string>
+    <string name="settings_import_json">Importar Copia JSON</string>
+    <string name="settings_import_dialog_title">¿Cómo deseas restaurar esta copia?</string>
+    <string name="settings_import_dialog_body">Elige si deseas combinar el archivo importado con tus datos actuales o reemplazar todo.</string>
+    <string name="settings_import_merge">Combinar</string>
+    <string name="settings_import_replace">Reemplazar todo</string>
+    <string name="feedback_export_success">Copia exportada correctamente.</string>
+    <string name="feedback_export_error">No se pudo exportar el archivo de copia.</string>
+    <string name="feedback_import_merge_success">Copia combinada (%1$d elementos restaurados).</string>
+    <string name="feedback_import_replace_success">Copia restaurada y reemplazada (%1$d elementos cargados).</string>
+    <string name="feedback_import_error">Archivo JSON de copia inválido o ilegible.</string>
+
+    <string name="settings_about_title">Acerca de y Privacidad</string>
+    <string name="settings_about_version_format">Versión %1$s (%2$d)</string>
+    <string name="settings_about_privacy">100% sin conexión. Sin permiso de internet ni telemetría; todos los datos permanecen en Room y DataStore en tu dispositivo.</string>
+</resources>

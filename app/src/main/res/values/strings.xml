@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">Moose Launcher</string>
+    <string name="action_back">Back to desktop</string>
+
+    <!-- Sections -->
+    <string name="tab_desktop">Desktop</string>
+    <string name="tab_library">App Library</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- Desktop Menu Bar & Search -->
+    <string name="spotlight_hint">Spotlight search apps, folders…</string>
+    <string name="spotlight_placeholder">Search apps or folders…</string>
+    <string name="spotlight_folders_header">Folders</string>
+    <string name="spotlight_apps_header">Apps</string>
+    <string name="spotlight_quick_actions">Quick Actions</string>
+    <string name="action_new_folder">New Folder</string>
+    <string name="action_manage_widgets">Widgets</string>
+
+    <!-- Widgets -->
+    <string name="widgets_section_title">Widgets</string>
+    <string name="widget_clock_title">Clock &amp; Date</string>
+    <string name="widget_system_title">Device Status</string>
+    <string name="widget_notes_title">Quick Notes</string>
+    <string name="widget_battery_label">Battery</string>
+    <string name="widget_battery_charging">%1$d%% • Charging</string>
+    <string name="widget_battery_discharging">%1$d%%</string>
+    <string name="widget_storage_label">Free Storage</string>
+    <string name="widget_storage_gb_format">%.1f GB free</string>
+    <string name="widget_notes_placeholder">Write a quick offline note…</string>
+    <string name="widget_notes_edit">Edit note</string>
+    <string name="widget_notes_save">Save</string>
+    <string name="widget_settings_title">Desktop Widgets</string>
+    <string name="widget_settings_subtitle">Choose local widgets or add widgets from other installed apps.</string>
+    <string name="widgets_add_external">Add App Widget</string>
+    <string name="widgets_external_header">Installed App Widgets</string>
+    <string name="widget_external_fallback">App Widget</string>
+    <string name="widget_external_remove">Remove widget</string>
+    <string name="widget_external_resize_taller">Taller</string>
+    <string name="widget_external_resize_compact">Compact</string>
+    <string name="widget_external_unavailable">Widget unavailable on this device.</string>
+
+    <!-- Desktop & Wallpaper Long-Press Sheet -->
+    <string name="desktop_customize_title">Desktop</string>
+    <string name="desktop_customize_subtitle">Organize folders, widgets, wallpaper, and launcher settings.</string>
+    <string name="desktop_hint_minimal">Long-press wallpaper to customize • Swipe up for Apps</string>
+    <string name="desktop_set_default_action">Set as Default Home</string>
+    <string name="desktop_menu_wallpaper">Choose Photo Wallpaper</string>
+    <string name="desktop_menu_notifications">Enable Notification Dots</string>
+    <string name="desktop_appearance_settings">Settings &amp; Backup</string>
+
+    <string name="folder_create_title">Create Folder</string>
+    <string name="folder_rename_title">Rename Folder</string>
+    <string name="folder_name_hint">Folder name (e.g. Work, Media)</string>
+    <string name="folder_create_confirm">Create</string>
+    <string name="folder_save_confirm">Save</string>
+    <string name="folder_cancel">Cancel</string>
+    <string name="folder_delete">Delete folder</string>
+    <string name="folder_add_apps">Add apps</string>
+    <string name="folder_empty_hint">This folder is empty. Add apps to group them cleanly.</string>
+    <string name="folder_count_format">%1$d apps</string>
+
+    <!-- macOS-Inspired Floating Dock -->
+    <string name="dock_apps_button">Launchpad</string>
+
+    <!-- App Library -->
+    <string name="library_search_placeholder">Search installed apps or packages…</string>
+    <string name="library_clear_search">Clear search</string>
+    <string name="library_count_format">%1$d apps</string>
+    <string name="library_empty_title">No matching apps</string>
+    <string name="library_empty_subtitle">Try another name or switch category.</string>
+    <string name="category_all">All</string>
+    <string name="category_productivity">Productivity</string>
+    <string name="category_media">Media</string>
+    <string name="category_communication">Social</string>
+    <string name="category_utilities">Utilities</string>
+    <string name="category_system">System</string>
+
+    <!-- App Actions Sheet -->
+    <string name="action_open_app">Open App</string>
+    <string name="action_pin_home">Pin to Desktop</string>
+    <string name="action_unpin_home">Remove from Desktop</string>
+    <string name="action_pin_dock">Pin to Dock</string>
+    <string name="action_unpin_dock">Remove from Dock</string>
+    <string name="action_add_to_folder">Folders</string>
+    <string name="action_app_info">App Info</string>
+    <string name="action_close">Close</string>
+    <string name="feedback_app_launch_error">Unable to launch %1$s on this device.</string>
+
+    <!-- Wallpaper Cropper -->
+    <string name="wallpaper_crop_title">Adjust Wallpaper</string>
+    <string name="wallpaper_crop_hint">Pinch to zoom and drag to frame your wallpaper.</string>
+    <string name="wallpaper_apply_desktop_only">Desktop Only</string>
+    <string name="wallpaper_apply_both">Desktop &amp; System</string>
+    <string name="feedback_wallpaper_updated">Wallpaper updated.</string>
+    <string name="feedback_wallpaper_error">Could not process selected photo.</string>
+
+    <!-- Settings & Backup -->
+    <string name="settings_appearance_title">Appearance &amp; Surface</string>
+    <string name="settings_theme_label">Theme</string>
+    <string name="settings_theme_system">System</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_dynamic_color">Dynamic Color (Material You)</string>
+    <string name="settings_dynamic_color_desc">Adapt palette to system wallpaper accents on Android 12+.</string>
+    <string name="settings_wallpaper_label">Desktop Backdrop</string>
+    <string name="settings_wallpaper_tonal">Clean Tonal</string>
+    <string name="settings_wallpaper_mist">Nordic Mist</string>
+    <string name="settings_wallpaper_midnight">Midnight Ridge</string>
+    <string name="settings_wallpaper_photo">Gallery Photo</string>
+    <string name="settings_pick_gallery_photo">Choose &amp; Crop Photo from Gallery</string>
+    <string name="settings_dock_labels">Show labels in Floating Dock</string>
+    <string name="settings_dock_labels_desc">Display compact app names beneath dock icons.</string>
+
+    <string name="settings_notifications_title">Notification Dots</string>
+    <string name="settings_notifications_active">Notification dots are active for apps on your desktop and dock.</string>
+    <string name="settings_notifications_inactive">Grant Notification Access so Moose Launcher can show minimal dots on icons.</string>
+    <string name="settings_open_notifications_settings">Configure Notification Access</string>
+
+    <string name="settings_launcher_title">System Launcher</string>
+    <string name="settings_default_home_status_active">Moose Launcher is currently your default Home app.</string>
+    <string name="settings_default_home_status_inactive">Set Moose Launcher as your default Home app for full integration.</string>
+    <string name="settings_open_home_settings">Choose Default Home App</string>
+
+    <string name="settings_backup_title">Offline Backup (.json)</string>
+    <string name="settings_backup_subtitle">Export or restore folders, grid positions, shortcuts, widgets, notes, and preferences locally.</string>
+    <string name="settings_export_json">Export JSON Backup</string>
+    <string name="settings_import_json">Import JSON Backup</string>
+    <string name="settings_import_dialog_title">How should this backup be restored?</string>
+    <string name="settings_import_dialog_body">Choose whether to merge the imported file with your current setup or replace everything.</string>
+    <string name="settings_import_merge">Merge</string>
+    <string name="settings_import_replace">Replace All</string>
+    <string name="feedback_export_success">Backup exported successfully.</string>
+    <string name="feedback_export_error">Could not export backup file.</string>
+    <string name="feedback_import_merge_success">Backup merged (%1$d items restored).</string>
+    <string name="feedback_import_replace_success">Backup restored and replaced (%1$d items loaded).</string>
+    <string name="feedback_import_error">Invalid or unreadable JSON backup file.</string>
+
+    <string name="settings_about_title">About &amp; Privacy</string>
+    <string name="settings_about_version_format">Version %1$s (%2$d)</string>
+    <string name="settings_about_privacy">100% offline. No internet permission, no telemetry; all desktop data stays in Room &amp; DataStore on your device.</string>
+</resources>
