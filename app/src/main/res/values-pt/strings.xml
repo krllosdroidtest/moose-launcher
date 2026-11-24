@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">Moose Launcher</string>
+    <string name="action_back">Voltar ao desktop</string>
+
+    <!-- Seções -->
+    <string name="tab_desktop">Desktop</string>
+    <string name="tab_library">Biblioteca de Apps</string>
+    <string name="tab_settings">Configurações</string>
+
+    <!-- Barra de Menu e Spotlight -->
+    <string name="spotlight_hint">Busca Spotlight de apps, pastas…</string>
+    <string name="spotlight_placeholder">Buscar apps ou pastas…</string>
+    <string name="spotlight_folders_header">Pastas</string>
+    <string name="spotlight_apps_header">Apps</string>
+    <string name="spotlight_quick_actions">Ações Rápidas</string>
+    <string name="action_new_folder">Nova Pasta</string>
+    <string name="action_manage_widgets">Widgets</string>
+
+    <!-- Widgets -->
+    <string name="widgets_section_title">Widgets</string>
+    <string name="widget_clock_title">Relógio &amp; Data</string>
+    <string name="widget_system_title">Status do Aparelho</string>
+    <string name="widget_notes_title">Notas Rápidas</string>
+    <string name="widget_battery_label">Bateria</string>
+    <string name="widget_battery_charging">%1$d%% • Carregando</string>
+    <string name="widget_battery_discharging">%1$d%%</string>
+    <string name="widget_storage_label">Espaço Livre</string>
+    <string name="widget_storage_gb_format">%.1f GB livres</string>
+    <string name="widget_notes_placeholder">Escreva uma nota rápida offline…</string>
+    <string name="widget_notes_edit">Editar nota</string>
+    <string name="widget_notes_save">Salvar</string>
+    <string name="widget_settings_title">Widgets do Desktop</string>
+    <string name="widget_settings_subtitle">Escolha quais widgets locais aparecem na sua tela inicial.</string>
+
+    <!-- Atalhos e Pastas -->
+    <string name="desktop_items_title">Área de Trabalho</string>
+    <string name="desktop_empty_title">Desktop Minimalista</string>
+    <string name="desktop_empty_subtitle">Crie pastas ou fixe seus apps favoritos pela Biblioteca de Apps para organizar seu espaço.</string>
+    <string name="desktop_open_library">Abrir Biblioteca de Apps</string>
+    <string name="desktop_set_default_banner">Definir Moose Launcher como tela inicial padrão</string>
+    <string name="desktop_set_default_action">Definir Padrão</string>
+
+    <string name="folder_create_title">Criar Pasta</string>
+    <string name="folder_rename_title">Renomear Pasta</string>
+    <string name="folder_name_hint">Nome da pasta (ex.: Trabalho, Mídia)</string>
+    <string name="folder_create_confirm">Criar</string>
+    <string name="folder_save_confirm">Salvar</string>
+    <string name="folder_cancel">Cancelar</string>
+    <string name="folder_delete">Excluir pasta</string>
+    <string name="folder_add_apps">Adicionar apps</string>
+    <string name="folder_empty_hint">Esta pasta está vazia. Adicione apps para agrupá-los.</string>
+    <string name="folder_count_format">%1$d apps</string>
+
+    <!-- Dock Flutuante Manual -->
+    <string name="dock_apps_button">Apps</string>
+    <string name="dock_empty_hint">Fixe apps na dock pela Biblioteca</string>
+
+    <!-- Biblioteca de Apps -->
+    <string name="library_search_placeholder">Buscar apps instalados ou pacotes…</string>
+    <string name="library_clear_search">Limpar busca</string>
+    <string name="library_count_format">%1$d apps</string>
+    <string name="library_empty_title">Nenhum app encontrado</string>
+    <string name="library_empty_subtitle">Tente outro nome ou mude a categoria.</string>
+    <string name="category_all">Todos</string>
+    <string name="category_productivity">Produtividade</string>
+    <string name="category_media">Mídia</string>
+    <string name="category_communication">Social</string>
+    <string name="category_utilities">Utilitários</string>
+    <string name="category_system">Sistema</string>
+
+    <!-- Ações do App -->
+    <string name="action_open_app">Abrir App</string>
+    <string name="action_pin_home">Fixar no Desktop</string>
+    <string name="action_unpin_home">Remover do Desktop</string>
+    <string name="action_pin_dock">Fixar na Dock</string>
+    <string name="action_unpin_dock">Remover da Dock</string>
+    <string name="action_add_to_folder">Pastas</string>
+    <string name="action_app_info">Informações do App</string>
+    <string name="action_close">Fechar</string>
+    <string name="feedback_app_launch_error">Não foi possível abrir %1$s neste dispositivo.</string>
+
+    <!-- Configurações & Backup -->
+    <string name="settings_appearance_title">Aparência &amp; Superfície</string>
+    <string name="settings_theme_label">Tema</string>
+    <string name="settings_theme_system">Sistema</string>
+    <string name="settings_theme_light">Claro</string>
+    <string name="settings_theme_dark">Escuro</string>
+    <string name="settings_dynamic_color">Cor Dinâmica (Material You)</string>
+    <string name="settings_dynamic_color_desc">Adapta a paleta às cores do papel de parede no Android 12+.</string>
+    <string name="settings_wallpaper_label">Fundo do Desktop</string>
+    <string name="settings_wallpaper_tonal">Tonal Limpo</string>
+    <string name="settings_wallpaper_mist">Névoa Nórdica</string>
+    <string name="settings_wallpaper_midnight">Cordilheira Noturna</string>
+    <string name="settings_dock_labels">Mostrar nomes na Dock Flutuante</string>
+    <string name="settings_dock_labels_desc">Exibe rótulos compactos abaixo dos ícones da dock.</string>
+
+    <string name="settings_launcher_title">Launcher do Sistema</string>
+    <string name="settings_default_home_status_active">O Moose Launcher já é o seu app de Início padrão.</string>
+    <string name="settings_default_home_status_inactive">Defina o Moose Launcher como tela inicial padrão para integração completa.</string>
+    <string name="settings_open_home_settings">Escolher App de Início Padrão</string>
+
+    <string name="settings_backup_title">Backup Offline (.json)</string>
+    <string name="settings_backup_subtitle">Exporte ou restaure pastas, atalhos do desktop, dock manual, widgets, notas e preferências localmente.</string>
+    <string name="settings_export_json">Exportar Backup JSON</string>
+    <string name="settings_import_json">Importar Backup JSON</string>
+    <string name="settings_import_dialog_title">Como deseja restaurar este backup?</string>
+    <string name="settings_import_dialog_body">Escolha se deseja mesclar o arquivo importado aos dados atuais ou substituir tudo.</string>
+    <string name="settings_import_merge">Mesclar</string>
+    <string name="settings_import_replace">Substituir tudo</string>
+    <string name="feedback_export_success">Backup exportado com sucesso.</string>
+    <string name="feedback_export_error">Não foi possível exportar o arquivo de backup.</string>
+    <string name="feedback_import_merge_success">Backup mesclado (%1$d itens restaurados).</string>
+    <string name="feedback_import_replace_success">Backup restaurado e substituído (%1$d itens carregados).</string>
+    <string name="feedback_import_error">Arquivo de backup JSON inválido ou ilegível.</string>
+
+    <string name="settings_about_title">Sobre &amp; Privacidade</string>
+    <string name="settings_about_version_format">Versão %1$s (%2$d)</string>
+    <string name="settings_about_privacy">100% offline. Sem permissão de internet nem telemetria; todos os dados ficam no Room e DataStore do aparelho.</string>
+</resources>
